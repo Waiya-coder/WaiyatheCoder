@@ -1,0 +1,58 @@
+ml () {  module ml "$@"
+}
+module () {  _module_raw "$@" 2>&1
+}
+_module_raw () {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl bash "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+echo "test"
+test
+
+#invalid arguments
+echo  "Incorrect number of arguments"
+Incorrect number of arguments
+./indexer  /thayerfs/home/f006g8m/cs50-dev/shared/tse/crawldata/letters-2/ index.out
+
+
+#no argument
+echo  "No argument"
+No argument
+./indexer bjbj
+See correct usage again.
+
+
+#one argument
+echo -e "One argument"
+One argument
+ ./indexer  /thayerfs/home/f006g8m/cs50-dev/shared/tse/crawldata/letters-2/  
+See correct usage again.
+
+
+
+ echo -e "More than three argument"
+More than three argument
+ ./indexer  /thayerfs/home/f006g8m/cs50-dev/shared/tse/crawldata/letters-2/  index.out index
+See correct usage again.
+
+ ./indexer /thayerfs/home/f006g8m/cs50-dev/shared/tse/crawldata/letters-2/  index.out index
+See correct usage again.
+
+./indexer  /thayerfs/home/f006g8m/cs50-dev/shared/tse/crawldata/toscrape-2/  index.out index
+See correct usage again.
+
+valid arguments
+testing.sh: line 26: valid: command not found
+
+ echo -e "Valid arguments"
+Valid arguments
+./indexer /thayerfs/home/f006g8m/cs50-dev/shared/tse/crawldata/letters-3/  index1.out 
+
+
+# #indextest
+echo -e "IndexTest"
+IndexTest
+ ./indextest ../../shared/tse/output/letters-3.index index.out
+
+
+
