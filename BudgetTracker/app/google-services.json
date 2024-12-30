@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "67731631829",
+    "project_id": "budgettracker-cb3a3",
+    "storage_bucket": "budgettracker-cb3a3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67731631829:android:72a55d33e9cff93978bc5c",
+        "android_client_info": {
+          "package_name": "com.example.measuremate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67731631829-kld8j5jqtqogbd7jv8a403vo8ijgdibe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtoVWkFOR1TkmNrCYgRqnNeu0B6b60sGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67731631829-kld8j5jqtqogbd7jv8a403vo8ijgdibe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
