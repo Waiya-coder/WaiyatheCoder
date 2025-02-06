@@ -1,0 +1,402 @@
+body{
+    background-image: url('WIZZZ.jpg'); 
+    /* got this font from chatGPT, told me it would add a magical feel */
+    font-family: 'Cinzel', serif;
+    background-size: cover;
+    background-position: center;
+    background-size: 150%; 
+    color : #f3e5ab;
+    text-align: center;
+}
+
+.intro-text h1{
+    font-size: 10rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(138, 43, 226, 0.8);
+    animation: glow 2s infinite alternate;
+
+}
+/* adapted from stack overflow and modified to fit with my wizard vibe */
+/* https://stackoverflow.com/questions/34821217/easily-create-an-animated-glow */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(138, 43, 226, 1);
+    }
+}
+
+.intro-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#start-btn{
+    font-size: 2.5rem;
+    padding: 20px 40px;
+    /* magical white boarder */
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    /* faint eerie white background */
+    background-color:rgba(255, 255, 255, 0.15);
+    /* slightly rounded for a spellbook feel */
+    border-radius: 12px;
+    color: #332e70;
+    border-radius: 10px;
+    text-shadow: 0 0 10px #f3e5ab, 0 0 20px #8b5cf6;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: 0.4s ease-in-out;
+    font-family: 'Cinzel', serif;
+    cursor: url('magic-wond.png'), pointer;
+}
+.start-btn:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: hsl(245, 42%, 31%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+    
+}
+/* adapted from stack overflow ":after is a pseudo element which allows you to insert content onto a page from CSS (without it needing to be in the HTML)."
+https://stackoverflow.com/questions/32805670/what-does-before-and-after-do-in-css  */
+.intro-page-container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(214, 119, 119, 0.1) 10%, rgba(0, 0, 0, 0) 80%);
+    z-index: -1;
+    animation: shimmer 3s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.5; }
+    50%{opacity: 0.8;}
+    100% { opacity: 1; }
+}
+
+#start-btn {
+    animation: flicker 2s infinite alternate; /* Adds a slight flicker effect */
+}
+
+.quiz-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 3.0rem;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+#next-btn{
+    font-size: 2.5rem;
+    padding: 20px 40px;
+    /* magical white boarder */
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    /* faint eerie white background */
+    background-color:rgba(255, 255, 255, 0.15);
+    /* slightly rounded for a spellbook feel */
+    border-radius: 12px;
+    color: #332e70;
+    border-radius: 10px;
+    text-shadow: 0 0 10px #f3e5ab, 0 0 20px #8b5cf6;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: 0.4s ease-in-out;
+    font-family: 'Cinzel', serif;
+    cursor: url('magic-wond.png'), pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.next-btn:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: hsl(245, 42%, 31%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+
+#prev-btn{
+    font-size: 2.5rem;
+    padding: 20px 40px;
+    /* magical white boarder */
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    /* faint eerie white background */
+    background-color:rgba(255, 255, 255, 0.15);
+    /* slightly rounded for a spellbook feel */
+    border-radius: 12px;
+    color: #332e70;
+    border-radius: 10px;
+    text-shadow: 0 0 10px #f3e5ab, 0 0 20px #8b5cf6;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: 0.4s ease-in-out;
+    font-family: 'Cinzel', serif;
+    cursor: url('magic-wond.png'), pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.prev-btn:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: hsl(245, 42%, 31%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+#submit-btn{
+    font-size: 2.5rem;
+    padding: 20px 40px;
+    /* magical white boarder */
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    /* faint eerie white background */
+    background-color:rgba(255, 255, 255, 0.15);
+    /* slightly rounded for a spellbook feel */
+    border-radius: 12px;
+    color: #332e70;
+    border-radius: 10px;
+    text-shadow: 0 0 10px #f3e5ab, 0 0 20px #8b5cf6;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: 0.4s ease-in-out;
+    font-family: 'Cinzel', serif;
+    cursor: url('magic-wond.png'), pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.submit-btn:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: hsl(245, 42%, 31%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+#restart-btn{
+    font-size: 2.5rem;
+    padding: 20px 40px;
+    /* magical white boarder */
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    /* faint eerie white background */
+    background-color:rgba(255, 255, 255, 0.15);
+    /* slightly rounded for a spellbook feel */
+    border-radius: 12px;
+    color: #332e70;
+    border-radius: 10px;
+    text-shadow: 0 0 10px #f3e5ab, 0 0 20px #8b5cf6;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: 0.4s ease-in-out;
+    font-family: 'Cinzel', serif;
+    cursor: url('magic-wond.png'), pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.restart-btn:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    color: hsl(245, 42%, 31%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+input[type="radio"] {
+   display : none;
+}
+
+
+input[type="radio"]:checked + label {
+    /* Selected styles */
+    background-color: #8b5cf6;
+    color: #332e70;
+    /* Other styling properties */
+}
+
+input[type="radio"] + label {
+    /* Unselected styles */
+    color: #f3e5ab;
+    /* Other styling properties */
+}
+
+
+/* Container for the radio input and label */
+ul ul label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #f3e5ab; /* Pale yellow for a spooky theme */
+    font-family: 'Cinzel', serif;
+    position: relative;
+    padding-left: 35px; /* Space for the custom radio */
+}
+
+/* Hide the native radio button */
+ul ul input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Custom radio button */
+ul ul label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border: 2px solid #f3e5ab;
+    border-radius: 50%;
+    background-color: #332e70; /* Dark purple background */
+    transition: background-color 0.3s, transform 0.3s;
+}
+/* ANIMATED RADIO BUTTONS ADAPTED FROM : https://moderncss.dev/pure-css-custom-styled-radio-buttons/ */
+/* Hover effect */
+ul ul input[type="radio"]:hover + label::before {
+    box-shadow: 0 0 10px #8b5cf6; /* Soft purple glow */
+    transform: scale(1.1);
+}
+
+/* Checked state */
+ul ul input[type="radio"]:checked + label::before {
+    background-color: #8b5cf6; /* Bright purple when selected */
+    border-color: #8b5cf6;
+    animation: pulse 0.4s ease-in-out;
+}
+
+/* Inner dot for checked state */
+ul ul input[type="radio"]:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #f3e5ab; /* Pale yellow inner dot */
+    border-radius: 50%;
+    animation: appear 0.3s forwards 0.3s;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #8b5cf6;
+    }
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 20px #8b5cf6;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #8b5cf6;
+    }
+}
+
+/* Inner dot appearance */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Overlay styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Overlay content styling */
+.overlay-content {
+    text-align: center;
+    color: #f3e5ab; /* Pale yellow for spooky theme */
+    font-family: 'Cinzel', serif;
+}
+
+/* Result image styling */
+#result-image {
+    width: 200px;
+    height: auto;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+
+.quiz-result {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center align */
+    justify-content: center;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.quiz-result img {
+    max-width: 80%; /* Ensures image is responsive */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-result-text {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: #f3e5ab; /* Pale yellow for spooky theme */
+    font-family: 'Cinzel', serif;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .quiz-result {
+        flex-direction: row; /* Image and text side by side */
+        text-align: left;
+    }
+    
+    .quiz-result img {
+        max-width: 40%;
+        margin-right: 20px;
+    }
+}
+
+
+
+
+
+
+
