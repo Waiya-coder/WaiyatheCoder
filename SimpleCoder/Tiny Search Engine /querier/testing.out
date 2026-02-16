@@ -1,0 +1,123 @@
+ml () {  module ml "$@"
+}
+module () {  _module_raw "$@" 2>&1
+}
+_module_raw () {  eval `/usr/bin/tclsh8.6 /usr/lib/x86_64-linux-gnu/modulecmd.tcl bash "$@"`;
+ _mlstatus=$?;
+ return $_mlstatus
+}
+./querier /thayerfs/home/f006g8m/cs50-dev/shared/tse/output/letters-2 /thayerfs/home/f006g8m/cs50-dev/shared/tse/output/letters-2.index <<EOF
+and
+or
+test
+home
+and home
+or playground
+playground or
+playground and page
+breadth 
+for
+home
+for
+first
+first or or home
+for or home
+for or home or this
+breadth or first
+algorithm or tse 
+algorithm and tse
+algorithm and and tse
+EOF
+Error:  and Should not be at the beginning of the string array 
+Error:  or Should not be at the beginning of the string array 
+Error:  and Should not be at the beginning of the string array 
+Error:  or Should not be at the beginning of the string array 
+Invalid Character. Character should either be an Alphabet or a space
+Invalid Character. Character should either be an Alphabet or a space
+Query: and 
+
+Query: or 
+
+Query: test 
+No documents match.
+
+
+Query: home 
+Number of Matches 3 Ranked documents: 
+score:	2 doc	1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+score:	1 doc	3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+score:	1 doc	2: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html
+
+
+Query: and home 
+
+Query: or playground 
+
+Query: playground or Error:  or should not be at the end of the string array 
+
+
+Query: playground and page 
+Number of Matches 1 Ranked documents: 
+score:	1 doc	1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+
+
+Query: breadth 
+
+Query: for 
+Number of Matches 3 Ranked documents: 
+score:	1 doc	3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+score:	1 doc	2: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html
+score:	1 doc	1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+
+
+Query: home 
+Number of Matches 3 Ranked documents: 
+score:	2 doc	1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+score:	1 doc	3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+score:	1 doc	2: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html
+
+
+Query: for 
+Number of Matches 3 Ranked documents: 
+score:	1 doc	3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+score:	1 doc	2: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html
+score:	1 doc	1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+
+
+Query: first 
+Number of Matches 1 Ranked documents: 
+score:	1 doc	3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+
+
+Query: first or or home Error: Two consecutive words cannot both be operators ('AND' or 'OR').
+
+
+Query: for or home 
+Number of Matches 3 Ranked documents: 
+score:	3 doc	1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+score:	2 doc	3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+score:	2 doc	2: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html
+
+
+Query: for or home or this 
+Number of Matches 3 Ranked documents: 
+score:	4 doc	1: http://cs50tse.cs.dartmouth.edu/tse/letters/index.html
+score:	2 doc	3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+score:	2 doc	2: http://cs50tse.cs.dartmouth.edu/tse/letters/A.html
+
+
+Query: breadth or first 
+Number of Matches 1 Ranked documents: 
+score:	2 doc	3: http://cs50tse.cs.dartmouth.edu/tse/letters/B.html
+
+
+Query: algorithm or tse 
+
+Query: algorithm and tse 
+Number of Matches 0 Ranked documents: 
+
+
+Query: algorithm and and tse Error: Two consecutive words cannot both be operators ('AND' or 'OR').
+
+
+Query: 

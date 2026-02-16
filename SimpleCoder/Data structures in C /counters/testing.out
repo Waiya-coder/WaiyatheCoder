@@ -1,0 +1,25 @@
+gcc -Wall -pedantic -std=c11 -ggdb  -I../lib   -c -o counterstest.o counterstest.c
+gcc -Wall -pedantic -std=c11 -ggdb  -I../lib   -c -o counters.o counters.c
+gcc -Wall -pedantic -std=c11 -ggdb  -I../lib counterstest.o counters.o ../lib/file.o ../lib/mem.o  -o counterstest
+valgrind --leak-check=full --show-leak-kinds=all ./counterstest
+==512793== Memcheck, a memory error detector
+==512793== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==512793== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==512793== Command: ./counterstest
+==512793== 
+counter1 has been created successfully
+Should print 100,110,120,130,400
+{[400:1],[130:1],[120:1],[110:1],[100:1],}should print one 100s and one 120s
+{[400:1],[130:1],[120:2],[110:1],[100:2],}should print one 100, one 110, five 120s, one 130s, three 400s, two 200s
+{[400:3],[130:1],[120:5],[110:1],[100:2],[200:2],[5:3],}
+Should print 5
+5
+==512793== 
+==512793== HEAP SUMMARY:
+==512793==     in use at exit: 0 bytes in 0 blocks
+==512793==   total heap usage: 9 allocs, 9 frees, 8,368 bytes allocated
+==512793== 
+==512793== All heap blocks were freed -- no leaks are possible
+==512793== 
+==512793== For lists of detected and suppressed errors, rerun with: -s
+==512793== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

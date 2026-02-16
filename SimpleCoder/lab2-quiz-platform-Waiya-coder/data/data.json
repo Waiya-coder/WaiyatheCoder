@@ -1,0 +1,127 @@
+{
+    "title": "Spooky Hogwarts House Traits Quiz",
+    "outcomes": {
+        "Gryffindor": {
+            "img": "gryffindor.jpg",
+            "text": "You value bravery, daring, nerve, and chivalry, a True Gryffindor."
+        },
+        "Hufflepuff": {
+            "img": "hufflepuff.jpg",
+            "text": "You value hard work, dedication, patience, loyalty, and fair play, a True Hufflepuff."
+        },
+        "Ravenclaw": {
+            "img": "ravenclaw.jpg",
+            "text": "You value intelligence, knowledge, curiosity, creativity, and wit, a True Ravenclaw."
+        },
+        "Slytherin": {
+            "img": "slytherin.jpg",
+            "text": "You value bravery, daring, nerve, and chivalry, a True Gryffindor."
+        }
+    },
+    "questions": [
+        {
+            "question_name": "While exploring a haunted forest, you encounter a mysterious path that splits into four directions, each leading to a different eerie destination. Which path do you choose?",
+            "question_img_url": "img/haunted_forest.jpg",
+            "answers": [
+                {
+                    "text": "A fog-covered trail leading to an ancient, abandoned castle.",
+                    "img_url": "img/abandoned_castle.jpg",
+                    "outcome": "Gryffindor"
+                },
+                {
+                    "text": "A narrow, winding path descending into a shadowy underground labyrinth.",
+                    "img_url": "img/underground_labyrinth.jpg",
+                    "outcome": "Hufflepuff"
+                },
+                {
+                    "text": "A staircase spiraling upwards into a dark, ominous tower.",
+                    "img_url": "img/dark_tower.jpg",
+                    "outcome": "Ravenclaw"
+                },
+                {
+                    "text": "A hidden passageway concealed behind thick, twisted vines.",
+                    "img_url": "img/hidden_passage.jpg",
+                    "outcome": "Slytherin"
+                }
+            ]
+        },
+        {
+            "question_name": "In a dimly lit library filled with ancient, cursed books, you find four tomes glowing with an eerie light. Which book do you choose to read?",
+            "question_img_url": "img/cursed_library.jpg",
+            "answers": [
+                {
+                    "text": "A crimson-covered book titled 'The Brave's Curse'.",
+                    "img_url": "img/braves_curse.jpg",
+                    "outcome": "Gryffindor"
+                },
+                {
+                    "text": "A golden-bound book named 'The Loyal Phantom'.",
+                    "img_url": "img/loyal_phantom.jpg",
+                    "outcome": "Hufflepuff"
+                },
+                {
+                    "text": "A sapphire-colored book called 'The Wise Apparition'.",
+                    "img_url": "img/wise_apparition.jpg",
+                    "outcome": "Ravenclaw"
+                },
+                {
+                    "text": "An emerald-embossed book entitled 'The Ambitious Specter'.",
+                    "img_url": "img/ambitious_specter.jpg",
+                    "outcome": "Slytherin"
+                }
+            ]
+        },
+        {
+            "question_name": "During a ghostly gathering, four spectral figures offer you a unique gift. Which do you accept?",
+            "question_img_url": "img/ghostly_gathering.jpg",
+            "answers": [
+                {
+                    "text": "A sword that glows with a fiery aura.",
+                    "img_url": "img/fiery_sword.jpg",
+                    "outcome": "Gryffindor"
+                },
+                {
+                    "text": "A shield that emanates a warm, comforting light.",
+                    "img_url": "img/comforting_shield.jpg",
+                    "outcome": "Hufflepuff"
+                },
+                {
+                    "text": "A quill that writes in shimmering, silver ink.",
+                    "img_url": "img/silver_quill.jpg",
+                    "outcome": "Ravenclaw"
+                },
+                {
+                    "text": "A locket that pulses with a deep, green glow.",
+                    "img_url": "img/green_locket.jpg",
+                    "outcome": "Slytherin"
+                }
+            ]
+        },
+        {
+            "question_name": "In a haunted village, you hear tales of four cursed artifacts, each with a unique power. Which artifact do you seek?",
+            "question_img_url": "img/haunted_village.jpg",
+            "answers": [
+                {
+                    "text": "A chalice that grants unparalleled courage to its bearer.",
+                    "img_url": "img/courage_chalice.jpg",
+                    "outcome": "Gryffindor"
+                },
+                {
+                    "text": "A pendant that bestows unwavering loyalty upon those who wear it.",
+                    "img_url": "img/loyalty_pendant.jpg",
+                    "outcome": "Hufflepuff"
+                },
+                {
+                    "text": "A diadem that enhances the wisdom of its possessor.",
+                    "img_url": "img/wisdom_diadem.jpg",
+                    "outcome": "Ravenclaw"
+                },
+                {
+                    "text": "A ring that amplifies the ambition of its owner.",
+                    "img_url": "img/ambition_ring.jpg",
+                    "outcome": "Slytherin"
+                }
+            ]
+        }
+    ]
+}

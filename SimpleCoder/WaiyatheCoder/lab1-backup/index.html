@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flour Bakery + Cafe</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    
+    <nav class="navbar"> 
+       
+        <a href="#welcome">Welcome</a> 
+        <a href="#valentines">Valentine's Day</a> 
+        <a href="#corporate">Corporate Gifting</a> 
+        <a href="#get-it-today">Get It Today</a> 
+        <a href="#bake-like-a-pro">Bake Like a Pro</a> 
+        <a href="#popular-items">Popular Items</a> 
+        <a href="#locations">Locations</a> 
+        <a href="#newsletter">Newsletter</a>
+    </nav>
+    <div class="intro-text">
+        <h1 id="welcome">Welcome to Flour Bakery + Cafe</h1>
+        <h2>
+            <p draggable="true">Baking is love.</p>
+            <p>Whether it’s a loaf of bread or a double-crust apple pie,</p>
+            <p>you bake for someone, you’re sharing a part of yourself</p> 
+            <p>We believe that, through baking, we can spread our love, joy, and gratitude to the entire world.</p>
+        </h2>
+    
+      
+        <input type="checkbox" id="about-toggle" class="about-checkbox">
+    
+      
+        <h2>
+            <!-- gotten from chatGPT, a label is something  used to connect with a form element (like a checkbox) without clicking it directly.  -->
+            <label for="about-toggle" class="about-btn">About Us</label>
+        </h2>
+    
+        
+        <div class="overlay-menu">
+            <div class="overlay-content">
+                <h2>About Us</h2>
+                <p>Flour Bakery + Cafe is dedicated to creating delicious, handcrafted baked goods.</p>
+                <p>We believe in spreading joy through the art of baking.</p>
+                <label for="about-toggle" class="close-btn">Close</label>
+            </div>
+        </div>
+    </div>
+    
+    
+<div class = "grid-container">
+    <div class="grid-item" id="valentines">
+        <h1>Valentine's Day Offerings</h1>
+        <h2><button>Valentine's Day Menus</button></h2>
+        <div class="content">
+            <p>Pre-order our valentine's day menu for pickup until 4pm on 2/11.</p>
+        </div>
+        
+        <img src="https://cdn.sanity.io/images/38f3s2bw/production/416b251ec13e82f83ed98a0c4c7bf69aeebbf9ae-3227x3227.jpg?w=320&q=75&fit=clip&auto=format" alt="Valentine's Day Offerings">
+    </div>
+
+    <div class="grid-item" id="corporate">
+        <h1>Corporate Gifting</h1>
+        <h2><button>Corporate Gifting</button></h2>
+        <div class="content">  
+        <p>Sweet corporate gifting ideas for clients, colleagues, vendors, and partners.</p> </div>
+        <img src="https://cdn.sanity.io/images/38f3s2bw/production/93933390b1e95f7cbd81cd134924c2964f27c428-11294x8471.jpg?w=320&q=75&fit=clip&auto=format" alt="Corporate Gifting">
+        <div class="content">
+       
+    </div>
+    </div>
+
+    <div class="grid-item" id="get-it-today">
+        <h1>Get It Today</h1>
+        <h2><button>Get It Today</button></h2>
+        <div class="content">  
+            <p>Order now and enjoy our freshly baked goods today!</p> 
+        </div>
+        <img src="https://cdn.sanity.io/images/38f3s2bw/production/e896519c16ddf0ab5a54c212355b0bce46bba00f-417x563.jpg?w=320&q=75&fit=clip&auto=format" alt="Get It Today">
+       
+    </div>
+
+    <div class="grid-item" id="bake-like-a-pro">
+        <h1>Bake Like a Pro</h1>
+        <h2><button>Bake Like a Pro</button></h2>
+        <div class="content">
+            <p>Join our baking classes and learn from the best.</p>
+        </div>
+        <img src="https://cdn.sanity.io/images/38f3s2bw/production/06ab161191027d29f88feae9b4dc62fd6f85502b-416x563.jpg?w=320&q=75&fit=clip&auto=format" alt="Bake Like a Pro">
+       
+       
+    </div>
+</div>
+
+    <div id="popular-items">
+        <h1>Popular Items</h1>
+        <table border="1">
+            <tr>
+                <td>
+                    <img src="https://cdn.sanity.io/images/38f3s2bw/production/9426714bb6b99def39133a236037adecbda2a82c-600x667.jpg?w=1920&q=75&fit=clip&auto=format" alt="Sticky Sticky Bun" width="250" height="250">
+                    <p>Sticky Sticky Bun</p>
+                    <p>$5.00</p>
+                </td>
+                <td>
+                    <img src="https://cdn.sanity.io/images/38f3s2bw/production/251041731784685a343d030790b5c7b544738d5c-417x563.png?w=1920&q=75&fit=clip&auto=format" alt="Achiote Chicken" width="250" height="250">
+                    <p>Achiote Chicken</p>
+                    <p>$11.50</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="image-container">
+        <img src="https://cdn.sanity.io/images/38f3s2bw/production/dce6975865979b2367cc18276f289d62f8c622a1-1600x900.jpg?w=1920&q=75&fit=clip&auto=format" alt="Share to work image">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Share our tastes? Come work with us.</h2>
+            <a class="btn" href="#" title="See open positions">See open positions</a>
+        </div>
+    </div>
+
+    <div id="locations">
+        <h2>WHERE TO FIND US</h2>
+        <ol>
+            <li>Central Square - Massachusetts Avenue</li>
+            <li>Fort Point - Farnsworth Street</li>
+            <li>Harvard Square - Mount Auburn Street</li>
+            <li>Seaport IDB - Drydock Avenue</li>
+            <li>South End - Washington Street</li>
+        </ol>
+        <h2><button>See All Bakeries</button></h2>
+    </div>
+
+    <footer class="footer">
+        <div id="newsletter" class="container">
+            <h2>Sign Up for Our Newsletter</h2>
+            <form action="subscribe.php" method="post">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="container">
+            <h2>Follow Us</h2>
+            <ul class="social-links">
+                <li>
+                    <a href="#" title="Facebook" target="_blank">
+                        <img src="facebook-icon.png" alt="Facebook" width="20" height="20">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
